@@ -1,10 +1,6 @@
 <?php
   include('header.php');
-<<<<<<< HEAD
-  head('pictotime','Mi perfil');
-=======
   head('pictotime','Mi Perfil');
->>>>>>> master
   include('Clases/perfilAction.php');
   include('Clases/Global.php');
   $global = new G();

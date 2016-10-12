@@ -10,7 +10,7 @@
 		}
 		//readfile('textosimple.png');
 		readfile($ubicacion);
-		unlink($ubicacion);
+		//unlink($ubicacion);
 		$Imagen = new uploadImage();
 	
 	}else{
