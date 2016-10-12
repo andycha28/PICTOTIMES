@@ -7,5 +7,5 @@ Scenario: Searching for "no"
 	Given I go to "/search.php"
 	When I fill in "txtBuscar" with "no"
 	And I press "btnBuscar"
-	Then I should see "no es solo pipeline"
+	Then I should see "nosso logo"
 	
