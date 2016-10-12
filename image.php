@@ -30,6 +30,11 @@
     //Mostrar la imagen
         echo '<img src="ftp://'
              .$global->getFtpServer().'/files/'.$ubicacion.'" width="500" height="400">';
+
+     //Boton compartir a fb
+    echo '<div class="fb-share-button" data-href='. $direccion.' data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u='. $direccion .'&amp;src=sdkpreparse">Compartir</a></div>';
+        echo '</div>';
+
 ?>
     
                         
