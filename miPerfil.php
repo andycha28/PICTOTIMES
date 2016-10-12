@@ -1,6 +1,6 @@
 <?php
   include('header.php');
-  head('pictotime','Inicio');
+  head('pictotime','Mi Perfil');
   include('Clases/perfilAction.php');
   include('Clases/Global.php');
   $global = new G();
@@ -19,7 +19,7 @@ try {
         echo '<h3>'.$elemento['nombreImagen'][0].'</h3>';
         echo '</br>';
         echo '<img style ="width:250px;"src="ftp://'.$global->getFtpServer().'/files/'.$elemento['url'].'" /> ';
-        echo  '<p><a href="image.php?image='.$elemento["_id"].'" class="btn btn-primary" role="button">Ver</a></p>'; 
+        echo  '<p><a href="imagedel.php?image='.$elemento["_id"].'" class="btn btn-primary" role="button">Ver</a></p>'; 
         echo '</br>';
       }
      
