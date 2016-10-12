@@ -2,7 +2,7 @@
  	include("Clases/editorAction.php"); 
  	$strRepuesta = "";
 	include('header.php');
-	head('pictotime', 'Imagen con texto');	
+	head('pictotime', 'Editor');	
 ?>
 <script type="text/javascript" src="./js/jquery.js"></script>
 <script>
