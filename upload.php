@@ -20,7 +20,7 @@
 
 		if(isset($_POST['btnSubir'])){
 			$Archivo = new Pictotimefile();
-			$status = $Archivo->upload($_COOKIE['nombre'], $nombreArchivo, $_POST["txtNombre"], $tipoArchivo, $tamanhoArchivo, isset($_POST["submit"]), $nombreTemporal, $strRepuesta);
+			$status = $Archivo->upload($_COOKIE['id_fb'], $nombreArchivo, $_POST["txtNombre"], $tipoArchivo, $tamanhoArchivo, isset($_POST["submit"]), $nombreTemporal, $strRepuesta);
 		
 		} 
 	?>

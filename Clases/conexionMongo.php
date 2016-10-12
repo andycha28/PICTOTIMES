@@ -87,7 +87,22 @@ class conexionMongo{
 		}
 
 
-
+function buscarUsuario($idUsuario, $numeroRegistros){//cambio de parametro $numeroRegistros por $numero_Registros
+			try{
+				require_once('Global.php');
+				$g = new G();
+				$conexion = new Mongo();
+				$baseDatos = $conexion->selectDB($g->getDB());
+				$coleccion = $baseDatos->selectCollection($g->getColeccion());
+				$cursor = $coleccion->find(array("usuario" => $idUsuario))->limit($numeroRegistros)->sort(array("fecha"=> -1));
+				return $cursor;
+			}catch(MongoConnectionException $e) {
+				die("No es posible conectarnos a la base de datos");
+			}
+			catch(MongoException $e) {
+				die('No es posible buscar la informacion');
+			}
+		}
 
 		
 		}		
