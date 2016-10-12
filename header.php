@@ -15,7 +15,7 @@
 			<a href="index.php">Inicio</a>
 			<a href="upload.php">Subir Archivo</a>
 			<a href="search.php">Buscar</a>
-			<a href="editor.php">Editor</a>
+			<a href="imageWithText.php">Editor</a>
 
 			
 		<?php
