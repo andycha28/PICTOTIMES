@@ -87,7 +87,7 @@ class conexionMongo{
 		}
 
 
-function buscarUsuario($idUsuario, $numeroRegistros){//cambio de parametro $numeroRegistros por $numero_Registros
+		function buscarUsuario($idUsuario, $numeroRegistros){//cambio de parametro $numeroRegistros por $numero_Registros
 			try{
 				require_once('Global.php');
 				$g = new G();
@@ -103,6 +103,23 @@ function buscarUsuario($idUsuario, $numeroRegistros){//cambio de parametro $nume
 				die('No es posible buscar la informacion');
 			}
 		}
+
+		function eliminarRegistro($idObjeto){//cambio de parametro $idObjeto por $id_Objeto
+			try{
+				require_once('Global.php');
+				$g = new G();
+				$conexion = new MongoClient($g->getDireccionMongo());
+				$baseDatos = $conexion->selectDB($g->getDB());
+				$coleccion = $baseDatos->selectCollection($g->getColeccion());
+				return $coleccion->remove(array("_id"=>new MongoId("$idObjeto")));
+
+			}catch(MongoConnectionException $e) {
+				die("No es posible conectarnos a la base de datos");
+			}
+			catch(MongoException $e) {
+				die('No es posible eliminar la informacion');
+			}
+		}		
 
 		
 		}		

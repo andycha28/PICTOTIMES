@@ -14,7 +14,11 @@
 
 ?>
         <div class="panel">
-                <h3>Vista Previa</h3>
+                <h3><?php
+                        echo implode(' ', $dato['nombreImagen']);
+                    ?>
+                    
+                </h3>
         </div>
 
 <?php
