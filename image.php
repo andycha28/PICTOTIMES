@@ -30,7 +30,6 @@
     //Mostrar la imagen
         echo '<img src="ftp://'
              .$global->getFtpServer().'/files/'.$ubicacion.'" width="500" height="400">';
-
 ?>
     
                         
