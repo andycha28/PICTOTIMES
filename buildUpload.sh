@@ -1,6 +1,6 @@
 cd Funcional_Automatizadas/FuncionalUpload/
 
-vendor/bin/behat 
+/bin/behat 
 cd ..
 cd ..
 phpunit	Clases/testUploadAction.php
