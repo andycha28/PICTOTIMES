@@ -1,0 +1,6 @@
+default:
+    extensions:
+        Behat\MinkExtension:
+            base_url: http://192.168.1.13/pictotimeFase3
+            goutte: ~
+            selenium2: ~
