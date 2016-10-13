@@ -74,5 +74,5 @@ echo "&nbsp&nbsp&nbsp<a href=\"ImageDownload.php?ubicacion=".$nuevoNombre."\">Ge
 echo "'<img src='".$nuevoNombre."?".$time."' style='width:".$longitudX."px;height:".$longitudY."px;'/>";
 //$resultado = "'<img src='".$nuevoNombre."'/>'";
 $Imagen = new uploadImage();
-$res = $Imagen->deletetmps($ruta);
+//$res = $Imagen->deletetmps($ruta);
 ?>
