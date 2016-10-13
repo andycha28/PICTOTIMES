@@ -5,7 +5,7 @@ Feature: pictotime delete
 
 Scenario: Exito al eliminar una imagen
 	Given I go to "/miPerfil.php"
-	Then I press "Ver"
+	Then I follow "Ver"
 	And I reload the page 
 	Then I go to "/imagedel.php"
 	And I press "btnEliminar"
