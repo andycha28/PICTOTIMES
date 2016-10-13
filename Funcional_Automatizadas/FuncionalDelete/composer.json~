@@ -1,0 +1,10 @@
+{
+    "name": "root/funcional-delete",
+    "authors": [
+        {
+            "name": "TereSalazar",
+            "email": "zandratere@gmail.com"
+        }
+    ],
+    "require": {}
+}
