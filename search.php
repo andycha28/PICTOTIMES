@@ -9,7 +9,7 @@
 ?>
 <div class="panel panel-default">
 	<div class="panel-heading">
-		<h3>Buscar Memes</h3>
+		<h3>Buscar Imagenes</h3>
 	</div>
 	<form action = "search.php" method = "post" enctype="multipart/form-data">
 	<div class="panel-body">

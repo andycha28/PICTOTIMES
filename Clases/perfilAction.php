@@ -6,10 +6,10 @@ class verPerfil{
 		$this->respOk = "No ha Creado Imagenes";
 	}
 	
-	public function buscarUsuario($idUsuario, $cantidad){			
+	public function buscarUsuario($idUsuario){			
 		require_once('conexionMongo.php');
 		$conMongo = new conexionMongo();
-		return $conMongo->buscarUsuario($idUsuario,$cantidad);
+		return $conMongo->buscarUsuario($idUsuario);
     		
 	}
 }
