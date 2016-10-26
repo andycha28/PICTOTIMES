@@ -15,16 +15,25 @@ try {
       echo 'No has subido ninguna imagen. Ve a la seccion Subir Fichero';
      }else{
       foreach($cursor as $elemento){
-        //print_r($elemento);
-        echo '<h3>'.$elemento['nombreImagen'][0].'</h3>';
-        echo '</br>';
-        echo '<img style ="width:250px;"src="ftp://'.$global->getFtpServer().'/files/'.$elemento['url'].'" /> ';
-        echo  '<p><a href="imagedel.php?image='.$elemento["_id"].'" class="btn btn-primary" role="button">Ver</a></p>'; 
-        echo '</br>';
+?>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="thumbnail">
+              <?php echo '<img style=width:200px;height:200px;class="img-responsive img-circle" src="ftp://'.$global->getFtpServer().'/files/'.$elemento['url'].'">'; ?>
+              <div class="caption">
+                <h3><?php echo implode(' ', $elemento["nombreImagen"]); ?></h3>
+                    <?php echo '<p><a href="imagedel.php?image='.$elemento["_id"].'" class="btn btn-primary" role="button">Ver</a></p>'; ?>
+              </div>
+          </div>
+        </div>
+
+
+<?php
+       
       }
      
      }
-} catch (Exception $e) {
+  }
+ catch (Exception $e) {
     echo 'Excepción capturada: ',  $e->getMessage(), "\n";
 }
  

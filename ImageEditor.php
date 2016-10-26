@@ -1,16 +1,21 @@
 <?php 
 //Obteniendo los valores para generar la imagen
-require_once("Clases/editorAction.php");
-
 $ruta = $_POST['valorRuta'];
 $text_1 = $_POST['valorTexto'];
 $text_2 = $_POST['valorTexto2'];
-$rojo_1 = $_POST['valorRojo1'];
-$verde_1 = $_POST['valorVerde1'];
-$azul_1 = $_POST['valorAzul1'];
-$rojo_2 = $_POST['valorRojo2'];
-$verde_2 = $_POST['valorVerde2'];
-$azul_2 = $_POST['valorAzul2'];
+$rgb1 = $_POST['RGB1'];
+$arreglo_rgb1 = explode(",",$rgb1);
+$rgb2 = $_POST['RGB2'];
+$arreglo_rgb2 = explode(",",$rgb2);
+//
+$rojo_1 = $arreglo_rgb1[0];
+$verde_1 = $arreglo_rgb1[1];
+$azul_1 = $arreglo_rgb1[2];
+//
+$rojo_2 = $arreglo_rgb2[0];
+$verde_2 = $arreglo_rgb2[1];
+$azul_2 = $arreglo_rgb2[2];
+
 $fuente = $_POST['valorFuente'];
 $size = $_POST['valorSize'];
 $alineacionTexto1 = $_POST['valorAlineacionTexto1'];
@@ -29,7 +34,7 @@ $nuevoNombre = substr($ruta, 0, strlen($ruta) - strlen($extension) - 1) . "_e." 
 $colorTexto1 = imagecolorallocate($imagen, $rojo_1, $verde_1, $azul_1);
 $colorTexto2 = imagecolorallocate($imagen, $rojo_2, $verde_2, $azul_2);
 
-$font = '.Fuentes/'.$fuente.'.ttf';
+$font = './.Fuentes/'.$fuente.'.ttf';
 
 //Calculando las dimensiones del texto
 $cajaTexto_1 = imagettfbbox($size, 0, $font, $text_1);
@@ -70,9 +75,8 @@ $longitudX = imagesx($imagen) * .6;
 $longitudY = imagesy($imagen) * .6;
 imagedestroy($imagen);
 $time =  time();
-echo "&nbsp&nbsp&nbsp<a href=\"ImageDownload.php?ubicacion=".$nuevoNombre."\">Generar y descargar<a><br>";
+echo "&nbsp&nbsp&nbsp<a class='btn btn-default' id=\"testTere\" name=\"testTere\" href=\"ImageDownload.php?ubicacion=".$nuevoNombre."\">Generar y descargar<a><br>";
 echo "'<img src='".$nuevoNombre."?".$time."' style='width:".$longitudX."px;height:".$longitudY."px;'/>";
 //$resultado = "'<img src='".$nuevoNombre."'/>'";
-$Imagen = new uploadImage();
-//$res = $Imagen->deletetmps($ruta);
+//echo $resultado;
 ?>
