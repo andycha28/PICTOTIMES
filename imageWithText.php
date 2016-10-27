@@ -81,7 +81,7 @@ function update2(picker) {
 			echo "<br><br>".$strRepuesta . "</div> </div>";
 //********************************************************
 			if($strRepuesta == "Imagen cargada exitosamente<br><br>"){
-
+				echo "</form>";
 
 				$texto = "<div class='panel panel-default'>
 						  <div class='panel-heading'>
@@ -153,7 +153,7 @@ function update2(picker) {
 			}
 		} 
 	?>
-</form>
+
 <?php
 	foot();
 ?>

@@ -62,7 +62,7 @@
 					echo '<img style=width:200px;height:200px; class="img-responsive img-circle" src="ftp://'
 						.$global->getFtpServer().'/files/'.$elemento['url'].'">';
 					echo '<div class="caption">';
-					echo "<h3>" . implode(" ", $elemento['nombreImagen'])."</h3>";
+					echo "<h3>".implode(" ", $elemento['nombreImagen'])."</h3>";
 					echo '<p><a href="image.php?image='.$elemento['_id']
 						.'" class="btn btn-primary" role="button">Ver</a></p>';
 					echo '</div></div></div>';
